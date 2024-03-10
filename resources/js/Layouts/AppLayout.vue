@@ -51,6 +51,11 @@ const logout = () => {
                                 <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </NavLink>
+
+                                <NavLink :href="route('notes.index')" :active="route().current('notes.index')">
+                                    Notas
+                                </NavLink>
+
                             </div>
                         </div>
 
@@ -194,6 +199,9 @@ const logout = () => {
                         <ResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
                             Dashboard
                         </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('notes.index')" :active="route().current('notes.index')">
+                            Notas
+                        </ResponsiveNavLink>
                     </div>
 
                     <!-- Responsive Settings Options -->
@@ -281,7 +289,11 @@ const logout = () => {
             </header>
 
             <!-- Page Content -->
+
             <main>
+                <div v-if="$page.props.flash.status">
+                    <p class="bg-blue-500 text-white font-bold p-4">{{ $page.props.flash.status }}</p>
+                </div>
                 <slot />
             </main>
         </div>
