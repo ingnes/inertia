@@ -541,11 +541,18 @@ export default {
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
-                     <h3>Creación de una nota</h3>
-                </div>
+              
+                <div class="md:grid md:grid-cols-3 md:gap-6">
 
-                <div class="bg-white shadow-md md:rounded-md">
+                    <div class="md:col-span-1">
+                        <div class="px-4 sm:px-0">
+                            <h3 class="text-lg text-gray-900"> Creación de Notas</h3>
+                            <p class="text-sm text-gray-600"> Crea una nueva nota</p>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-2 mt-5 md:mt-0">
+                        <div class="bg-white shadow-md md:rounded-md">
                     
                     <form @submit.prevent="submit">
                         <label class="font-medium block text-sm rounded-sm pt-4 text-gray-700">
@@ -572,9 +579,12 @@ export default {
 
                 </div>
 
-            </div>        
+                    </div>
+                    
+                </div>               
 
-        
+            </div> 
+
         </div>
 
     </AppLayout>

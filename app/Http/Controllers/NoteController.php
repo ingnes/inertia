@@ -11,9 +11,11 @@ class NoteController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-       $data['notas'] = Note::orderBy('id')->get();
+       $data['notas'] = Note::orderBy('id')
+                        ->where('extracto', 'LIKE', '%'.$request->q.'%')
+                        ->get();
 
        return Inertia::render('Notes/Index')->with($data);
     }

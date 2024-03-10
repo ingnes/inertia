@@ -544,39 +544,49 @@ export default {
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg">
-                     <h3>Edición de una nota</h3>
-                </div>
+                <div class="md:grid md:grid-cols-3 md:gap-6">
 
-                <div class="bg-white shadow-md md:rounded-md">
+                    <div class="md:col-span-1">
+                        <div class="px-4 sm:px-0">
+                            <h3 class="text-lg text-gray-900"> Edicion de Notas</h3>
+                            <p class="text-sm text-gray-600"> Edita el extracto y el contenido de una nota seleccionada</p>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-2 mt-5 md:mt-0">
+
+                        <div class="bg-white shadow-md md:rounded-md">
                     
-                    <form @submit.prevent="submit">
-                        <label class="font-medium block text-sm rounded-sm pt-4 text-gray-700">
-                            Extracto
-                        </label>
-                        <textarea class="form-input w-full rounded-md text-gray-700 shadow-sm"
-                                    v-model="form.extracto">
-                        </textarea>
+                            <form @submit.prevent="submit">
+                                <label class="font-medium block text-sm rounded-sm pt-4 text-gray-700">
+                                    Extracto
+                                </label>
+                                <textarea class="form-input w-full rounded-md text-gray-700 shadow-sm"
+                                            v-model="form.extracto">
+                                </textarea>
 
-                        <label class="font-medium block text-sm rounded-sm pt-4 text-gray-700">
-                            Contenido
-                        </label>
-                        <textarea class="form-input w-full rounded-md text-gray-700 shadow-sm"
-                                    rows="8"
-                                    v-model="form.contenido">
-                        </textarea>
+                                <label class="font-medium block text-sm rounded-sm pt-4 text-gray-700">
+                                    Contenido
+                                </label>
+                                <textarea class="form-input w-full rounded-md text-gray-700 shadow-sm"
+                                            rows="8"
+                                            v-model="form.contenido">
+                                </textarea>
 
-                        <button class="bg-blue-500 hover:bg-blue-800 text-white font-bold rounded-md py-2 px-4">
-                            Editar
-                        </button>
+                                <button class="bg-blue-500 hover:bg-blue-800 text-white font-bold rounded-md py-2 px-4">
+                                    Editar
+                                </button>
 
-                    </form>
+                            </form>
+
+                        </div>
+                    </div>
 
 
                 </div>
 
-            </div>        
 
+            </div>
         
         </div>
 
